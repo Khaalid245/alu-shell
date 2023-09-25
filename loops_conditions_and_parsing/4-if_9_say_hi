@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Display "Best School" 10 times with "Hi" on a new line for the 9th iteration
+# Displayi "Best School" 10 times with "Hi" on a new line for the 9th iteration
 count=0; while [ $count -lt 10 ]; do if [ $count -eq 8 ]; then echo -e "Best School\nHi"; else echo "Best School"; fi; count=$((count+1)); done
