@@ -1,26 +1,32 @@
 #!/usr/bin/env bash
-#!/bin/bash
-
-# Set the initial hour and minute values
 hour=0
-minute=1
 
-# Start the while loop
-while [[ $hour -le 12 ]] && [[ $minute -le 59 ]]; do
 
-  # Display the current time
-  echo "$hour:$minute"
 
-  # Increment the minute value
-  minute=$((minute + 1))
+while [ $hour -le 12 ]
 
-  # If the minute value is greater than 59, then increment the hour value and reset the minute value to 1
-  if [[ $minute -gt 59 ]]; then
-    hour=$((hour + 1))
+do
+
+    echo "Hour: $hour"
+
+
+
     minute=1
-  fi
+
+
+
+        while [ $minute -le 59 ]
+
+    do
+
+        echo $minute
+
+        ((minute++))
+
+    done
+
+
+
+    ((hour++))
 
 done
-
-# Use the head command to display the first 70 lines of the output
-head -70
