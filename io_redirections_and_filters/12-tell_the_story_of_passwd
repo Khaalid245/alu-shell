@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# Set IFS to colon ':' to split fields in /etc/passwd
-IFS=":"
-
 # Open the /etc/passwd file for reading
 while read -r username password uid gid user_info home shell
 do
