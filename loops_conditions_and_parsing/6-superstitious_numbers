@@ -1,3 +1,38 @@
 #!/usr/bin/env bash
-# Display numbers and specific messages based on the loop iteration
-count=1; while [ $count -le 20 ]; do case $count in 4) echo "$count and then bad luck from China" ;; 9) echo "$count and then bad luck from Japan" ;; 17) echo "$count and then bad luck from Italy" ;; *) echo $count ;; esac; count=$((count+1)); done
+#Replace this text with your comment
+
+i=1
+
+while [ $i -le 20 ]
+
+do
+
+    case $i in
+
+4)
+
+    echo -e "$i\nbad luck from China"
+
+    ;;
+
+9)
+
+    echo -e "$i\nbad luck from Japan"
+
+    ;;
+
+17)
+
+    echo -e "$i\nbad luck from Italy"
+
+    ;;
+
+*)
+
+    echo $i
+
+    esac
+
+    ((i++))
+
+done
