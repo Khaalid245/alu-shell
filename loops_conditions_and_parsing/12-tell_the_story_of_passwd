@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-#Replace this text with your comment
-while IFS=: read -r f1 f2 f3 f4 f5 f6 f7;                                                                                              
+# Set the Internal Field Separator (IFS) to colon ":" to parse /etc/passwd
+IFS=":"
 
-do                                                                                                                                     
-
-        echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more inf\
-
-o about the user here: $f5"                                                                                                            
-
-                                                                                                                                       
-
-done</etc/passwd
+# Read the /etc/passwd file line by line using a while loop
+while read -r username password uid gid info home shell
+do
+  echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $info"
+done < /etc/passwd
 
