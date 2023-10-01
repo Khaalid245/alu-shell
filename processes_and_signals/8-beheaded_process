@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
-# Kill the "7-highlander" process with the SIGKILL signal
-pkill -SIGKILL -f "./7-highlander"
+#!/bin/bash
+
+# Kill the 7-highlander process
+pkill 7-highlander
+
+# Check if the process was successfully killed
+if [ $? -eq 0 ]; then
+  echo "Successfully killed the 7-highlander process."
+else
+  echo "Failed to kill the 7-highlander process."
+fi
+
