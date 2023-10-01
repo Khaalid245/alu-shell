@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# change this comment Get and display the script's P.I.D. done by Chriss
+echo "$$\n"
