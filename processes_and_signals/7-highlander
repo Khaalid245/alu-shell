@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# khalid, Bash script that displays to infinity: 
+
+while :                                            
+do                                                 
+        echo "To infinity and beyond"              
+        sleep 2                                    
+        trap 'echo "I am invincible!!!"' SIGTERM   
+done    
