@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Create a file containing the script's PID
 sudo bash -c "echo $$ > /var/run/myscript.pid"
-
 # Define trap handlers for signals
 trap 'echo "Y U no love me?!"' SIGINT
 trap 'echo "I hate the kill command"; sudo rm -f /var/run/myscript.pid; exit' SIGTERM
